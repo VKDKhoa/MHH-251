@@ -1,0 +1,96 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+    <net id="test_001_id"
+         type="http://www.pnml.org/version-2009/grammar/ptnet">
+        <!--net id = 60d34214-edbe-4e69-8242-89f87fa3f950 -->
+        
+        <name> <!-- net name-->
+            <text>test_001</text>
+        </name>
+        
+        <page id="page_001_id">
+            
+            <!-- =============== PLACE P DECLARE =============== -->
+            <place id="P1_ID">
+                <name>
+                    <text>P1</text>
+                    <graphics>
+                        <offset x="-40" y="5" />
+                    </graphics>
+                </name>
+                <initialMarking>
+                    <text>1</text>
+                </initialMarking>
+            </place>
+            
+            <place id="P2_ID">
+                <name>
+                    <text>P2</text>
+                    <graphics>
+                        <offset x="-40" y="5" />
+                    </graphics>
+                </name>
+                <initialMarking> <!-- initial marking token in P-->
+                    <text>0</text>
+                </initialMarking>
+            </place>
+
+            <place id="P3_ID">
+                <name>
+                    <text>P2</text>
+                    <graphics>
+                        <offset x="-40" y="5" />
+                    </graphics>
+                </name>
+                
+                <initialMarking> <!-- initial marking token in P-->
+                    <text>0</text>
+                </initialMarking>
+            </place>
+
+            <!-- ============ TRANSISTION T DECLARE ================= -->
+            <transition id="T1_ID">
+                <name>
+                    <text>T1</text>
+                </name>
+            </transition>
+
+            <transition id="T2_ID">
+                <name>
+                    <text>T2</text>
+                </name>
+            </transition>
+
+            <transition id="T3_ID">
+                <name>
+                    <text>T3</text>
+                </name>
+            </transition>
+
+            <!-- ============ ARCS DECLARE ================ -->
+            <arc id="P1_to_T1_arc"
+                 source="P1_ID"
+                 target="T1_ID"/>
+
+            <arc id="T1_to_P2_arc"
+                 source="T1_ID"
+                 target="P2_ID"/>
+
+            <arc id="P2_to_T2_arc"
+                 source="P2_ID"
+                 target="T2_ID"/>
+            
+            <arc id="T2_to_P3_arc"
+                 source="T2_ID"
+                target="P3_ID"/>
+            
+            <arc id="P3_to_T3_arc"
+                 source="P3_ID"
+                 target="T3_ID"/>
+
+            <arc id="T3_to_P1_arc"
+                 source="T3_ID"
+                target="P1_ID">
+            </arc>
+        </page>
+    </net>
+</pnml>

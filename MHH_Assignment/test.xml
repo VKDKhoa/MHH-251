@@ -1,0 +1,34 @@
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+    <net id="60d34214-edbe-4e69-8242-89f87fa3f950"
+         type="http://www.pnml.org/version-2009/grammar/ptnet">
+        <!--net id = 60d34214-edbe-4e69-8242-89f87fa3f950 -->
+        <name> <!-- net name-->
+            <text>undefined</text>
+        </name>
+        <page id="596873b8-39d6-4176-8ed7-1583339844d8">
+            <place id="4ae95f47-c1c9-4986-bbb7-ea16bb88aee6">
+                <name>
+                    <text>P1</text>
+                    <graphics>
+                        <offset x="-40" y="5" />
+                    </graphics>
+                </name>
+                <initialMarking>
+                    <text>1</text>
+                </initialMarking>
+            </place>
+            <transition id="afda5df1-6c84-4912-9eea-1131537be8ce">
+                <name>
+                    <text>T1</text>
+                </name>
+            </transition>
+            <arc id="e7d40dfd-94f9-47be-9acc-d59684990e95"
+                 source="4ae95f47-c1c9-4986-bbb7-ea16bb88aee6"
+                 target="afda5df1-6c84-4912-9eea-1131537be8ce" />
+            <arc id="a1dc8833-9495-4400-a35e-72bd9dbebedd"
+                 source="afda5df1-6c84-4912-9eea-1131537be8ce"
+                 target="4ae95f47-c1c9-4986-bbb7-ea16bb88aee6">
+            </arc>
+        </page>
+    </net>
+</pnml>
